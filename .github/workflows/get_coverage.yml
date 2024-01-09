@@ -34,7 +34,7 @@ jobs:
           set -o pipefail
           pytest \
             --junitxml=pytest.xml \
-            --cov-report=term-missing:skip-covered \
+            --cov-report=term-missing \
             --cov=batman_curve \
           | tee pytest-coverage.txt
 
