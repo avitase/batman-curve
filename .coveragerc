@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = batman-curve
+source = batman_curve
 
 [report]
 exclude_lines =
@@ -10,4 +10,4 @@ exclude_lines =
     pass
 ignore_errors = True
 omit =
-    batman-curve/_version.py
+    batman_curve/_version.py
