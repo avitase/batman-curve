@@ -4,7 +4,7 @@ repos:
     hooks:
     - id: black
       language_version: python3
-      exclude: (batman/_version|versioneer).py
+      exclude: (batman_curve/_version|versioneer).py
 
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
