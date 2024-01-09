@@ -1,0 +1,13 @@
+[run]
+branch = True
+source = batman-curve
+
+[report]
+exclude_lines =
+    pragma: no cover
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    pass
+ignore_errors = True
+omit =
+    batman-curve/_version.py
