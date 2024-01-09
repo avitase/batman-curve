@@ -32,22 +32,11 @@ jobs:
       - name: Run test suite
         run: |
           set -o pipefail
-          pytest \
-            --junitxml=pytest.xml \
-            --cov-report=term-missing \
-            --cov=batman_curve \
-          | tee pytest-coverage.txt
+          pytest --cov-report xml --cov=batman_curve
 
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          files: ./pytest-coverage.txt
-
-      - name: Add Coverage to pull request
-        uses: MishaKav/pytest-coverage-comment@v1.1.50
-        if: github.event_name == 'pull_request'
-        with:
-          pytest-coverage-path: ./pytest-coverage.txt
-          junitxml-path: ./pytest.xml
+          files: ./coverage.xml
