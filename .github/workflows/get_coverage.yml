@@ -46,7 +46,7 @@ jobs:
           files: ./pytest-coverage.txt
 
       - name: Add Coverage to pull request
-        uses: MishaKav/pytest-coverage-comment@v1.1.48
+        uses: MishaKav/pytest-coverage-comment@v1.1.50
         if: github.event_name == 'pull_request'
         with:
           pytest-coverage-path: ./pytest-coverage.txt
