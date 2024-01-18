@@ -20,7 +20,7 @@ https://mathworld.wolfram.com/BatmanCurve.html
 ```bash
 # production installation
 $ pip install -r requirements.txt
-$ pip install batman
+$ pip install batman-curve
 
 # development installation
 $ pip install -e .[dev]
